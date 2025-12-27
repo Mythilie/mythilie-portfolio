@@ -1,10 +1,15 @@
 .about,
-.my-skills,
+.skill-content,
 .my-resume {
+
     border: 1px solid #CFCFCF;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 1rem;
+}
+
+.skill-content {
+    padding: 0 1rem 1rem 1rem;
 }
 
 .about {
@@ -31,6 +36,8 @@
 }
 
 .about-content h3,
+.prj-content,
+.skill-content,
 .about-content p {
     text-align: left;
     margin: 0;
@@ -53,6 +60,151 @@
     align-items: center;
     gap: 1rem;
     cursor: pointer;
+}
+
+.icnclss {
+    background-color: #eaeaea;
+    padding: 10px;
+    color: #6366f1;
+    border-radius: 10px;
+}
+
+/* project */
+
+.my-project {
+    position: relative;
+    min-height: 300px;
+    width: 95%;
+    border-radius: 20px;
+    overflow: visible;
+    /* important */
+    z-index: 1;
+}
+
+/* Main image layer */
+.my-project .bg-layer {
+    position: relative;
+    background-image: url("../assets/images/global/bgImg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+/* Grey card 1 */
+.my-project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #d1d5db;
+    border-radius: 20px;
+    transform: translate(10px, 10px);
+    z-index: -1;
+}
+
+/* Grey card 2 */
+.my-project::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #e5e7eb;
+    border-radius: 20px;
+    transform: translate(20px, 20px);
+    z-index: -2;
+}
+
+.prjContent {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    color: #fff;
+}
+
+.prjContent p {
+    margin-top: 0;
+}
+
+.prjTag {
+    border: 1px solid #CFCFCF;
+    width: 15%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tapIcn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 5px 10px;
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+}
+
+
+/* skillset */
+
+.skillWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skillSet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+.skillSet Img {
+    width: 2rem;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Resume Section */
+.my-resume {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resume-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: white;
+    background-image: url("../assets/images/global/bgImg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    flex: 1;
+}
+
+.resumeBtn {
+    padding: 0.5rem 1.8rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    transition: all 0.25s ease;
+}
+
+.resumeBtn:hover {
+    transform: translateY(-2px);
 }
 
 @media (max-width: 555px) {
