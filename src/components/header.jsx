@@ -1,33 +1,92 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { TbBrandFiverr } from "react-icons/tb";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./global.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 function Header() {
+  const navigate = useNavigate();
+  const [openMenu, setOpenMenu] = useState(false);
+  const [link, setLink] = useState("Home");
   return (
     <div className="header-container">
       <div>
         <h2>Mythilie S</h2>
       </div>
       <div className="icons-link">
-        <a
-          className="icn-bg"
-          href="https://github.com/Mythilie"
-          target="_blank"
+        <div
+          onClick={() => {
+            setLink("Home"), navigate("/");
+          }}
+          className={`link ${link === "Home" && "linkenable"}`}
         >
-          <FaGithub />
-        </a>
-        <a
-          className="icn-bg"
-          href="https://www.linkedin.com/in/mythilie-s-834a14394/"
-          target="_blank"
+          Home
+        </div>
+        <div
+          className={`link ${link === "Projects" && "linkenable"}`}
+          onClick={() => {
+            setLink("Projects"), navigate("/projects");
+          }}
         >
-          <FaLinkedin />
-        </a>
-        <div className="icn-bg">
-          <TbBrandFiverr />
+          Projects
+        </div>
+        <div
+          className={`link ${link === "Contact" && "linkenable"}`}
+          onClick={() => {
+            setLink("Contact"), navigate("/");
+          }}
+        >
+          Contact
         </div>
       </div>
+      <div className="menu-link" onClick={() => setOpenMenu(true)}>
+        <GiHamburgerMenu />
+      </div>
+      {openMenu && (
+        <>
+          {/* Overlay */}
+          <div className="overlay" onClick={() => setOpenMenu(false)}></div>
+
+          {/* Sidebar */}
+          <div className="sidebar">
+            <div className="closeMenu" onClick={() => setOpenMenu(false)}>
+              <IoMdClose />
+            </div>
+            <div
+              className="sidebar-link"
+              onClick={() => {
+                setLink("Home");
+                navigate("/");
+                setOpenMenu(false);
+              }}
+            >
+              Home
+            </div>
+
+            <div
+              className="sidebar-link"
+              onClick={() => {
+                setLink("Projects");
+                navigate("/projects");
+                setOpenMenu(false);
+              }}
+            >
+              Projects
+            </div>
+
+            <div
+              className="sidebar-link"
+              onClick={() => {
+                setLink("Contact");
+                navigate("/");
+                setOpenMenu(false);
+              }}
+            >
+              Contact
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

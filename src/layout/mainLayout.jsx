@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../components/header";
-import Body from "../components/body";
+import { Outlet } from "react-router-dom";
 import "./layout.css";
-import Footer from "../components/footer";
 
 export default function MainLayout() {
   return (
@@ -11,8 +10,7 @@ export default function MainLayout() {
         <Header />
       </div>
       <div className="content">
-        <Body />
-        <Footer />
+        <Outlet />
       </div>
     </div>
   );

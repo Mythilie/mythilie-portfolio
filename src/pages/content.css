@@ -52,6 +52,11 @@
     text-align: start;
 }
 
+.connectMelink {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .link {
     margin-top: 10px;
     text-decoration: none;
@@ -72,6 +77,7 @@
 /* project */
 
 .my-project {
+    cursor: pointer;
     position: relative;
     min-height: 300px;
     width: 95%;
@@ -84,10 +90,10 @@
 /* Main image layer */
 .my-project .bg-layer {
     position: relative;
-    background-image: url("../assets/images/global/bgImg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg,
+            #000000 0%,
+            #1a1a1a 40%,
+            #3a3a3a 100%);
     min-height: 300px;
     border-radius: 20px;
     z-index: 3;
@@ -184,9 +190,10 @@
     justify-content: space-between;
     gap: 1.5rem;
     color: white;
-    background-image: url("../assets/images/global/bgImg.png");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(180deg,
+            #000000 0%,
+            #1a1a1a 40%,
+            #3a3a3a 100%);
     border-radius: 14px;
     padding: 1rem 1.5rem;
     flex: 1;
@@ -207,10 +214,14 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 555px) {
+@media (max-width: 580px) {
     .about {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .prjTag {
+        width: 30%;
     }
 
 }
