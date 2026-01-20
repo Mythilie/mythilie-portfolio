@@ -10,7 +10,7 @@ function Header() {
   const [link, setLink] = useState("Home");
   return (
     <div className="header-container">
-      <div>
+      <div className="headerLogo" onClick={() => navigate("/")}>
         <h2>Mythilie S</h2>
       </div>
       <div className="icons-link">
