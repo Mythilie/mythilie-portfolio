@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.headerLogo{
+.headerLogo {
     cursor: pointer;
 }
 
@@ -129,6 +129,10 @@
 @media (max-width: 678px) {
     .icons-link {
         display: none;
+    }
+
+    .header-container {
+        padding: 0 0.5rem;
     }
 
     .menu-link {

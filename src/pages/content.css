@@ -254,7 +254,69 @@
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: start;
+
+}
+
+.rightContainer h1 {
+    font-size: 20px;
+}
+
+.rightContainer p {
+    text-align: left;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 5px auto;
+}
+
+.slider-image {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.projectCard {
+    background: #e5e7eb;
+    padding: 20px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 88%;
+}
+
+.project-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #045381;
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
 .resume-tlt {
@@ -323,5 +385,23 @@
     .prjContent h2 {
         margin: 5px 0;
         font-size: 19px;
+    }
+}
+
+@media (max-width: 992px) {
+    .leftContainer {
+        display: none;
+    }
+
+    .rightContainer h1 {
+        font-size: 17px;
+    }
+
+    .rightContainer p {
+        font-size: 15px;
+    }
+
+    .rightContainer {
+        width: 100%;
     }
 }

@@ -18,6 +18,9 @@ const Images = {
   responsive: images["../assets/images/logo/resposiveness.webp"]?.default,
   tailwind: images["../assets/images/logo/tailwind.webp"]?.default,
   ts: images["../assets/images/logo/ts.webp"]?.default,
+
+  prj1: images["../assets/images/global/prj1.png"]?.default,
+  prj01: images["../assets/images/global/prj01.png"]?.default,
 };
 
 export default Images;
