@@ -4,12 +4,12 @@ import { MdOutlineFileDownload } from "react-icons/md";
 function Resume() {
   return (
     <div className="my-resume">
-      <div className="resume-tlt">
+      <a className="resume-tlt">
         <h2 className="resume-title">Resume</h2>
-        <div className="dwndIcn">
+        <a href="/Mythilie_Resume.pdf" download className="dwndIcn">
           <MdOutlineFileDownload />
-        </div>
-      </div>
+        </a>
+      </a>
       <div className="resume-card">
         <p className="resume-text">More details about my career</p>
         <a href="/Mythilie_Resume.pdf" download className="resumeBtn">
